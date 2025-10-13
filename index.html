@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body class="h-screen flex items-center justify-center">
+    <main class="w-100%">
+        <section class="weather_app bg-gradient-to-br from-blue-500 to-purple-500 w-100% h-auto rounded-3xl p-6 shadow-lg">
+            <div class="weather_info flex gap-5 mb-8">
+                <input type="text" name="city" id="city" placeholder="Enter city name" class="border-1 border-white placeholder-white rounded-3xl text-center w-90 h-10">
+                <button id="search" class="bg-white text-black rounded-full w-15 h-10 text-center align-middle cursor-pointer"><ion-icon name="search" class="text-black text-xl justify-center items-center"></ion-icon></button>
+            </div>
+            <div class="main_container flex flex-col items-center text-white">
+                <img src="images/sun.png" alt="sun_not_available" id="w_icon" class="w-40 h-40">
+                <div class="weather_data flex items-center flex-col gap-2">
+                    <h2 id="city_name" class="font-bold text-3xl">Enter City name</h2>
+                    <h1 id="temp" class="text-2xl">&#176;C</h1>
+                    <h3 id="condition" class="text-xl font-bold">Condition</h3>
+            </div>
+            </div>
+            <div class="weather_extra_data flex justify-center gap-25 mt-8 text-white">
+                <div class="humidity flex flex-row items-center">
+                    <div class="img"><img id="humidity_icon" src="images/humidity.png" alt="" class="w-12 h-12 mr-2"></div>
+                    <div class="data flex flex-col gap-1 ml-2">
+                        <h4 id="humidity" class="">Humidity</h4>
+                        <h2 id="humidity_data" class="font-bold text-3xl">0%</h2>
+                    </div>
+                </div>
+                <div class="wind flex flex-row items-center">
+                    <div class="img"><img src="images/wind.png" alt="" class="w-15 h-15 "></div>
+                    <div class="data flex flex-col gap-1 ml-2">
+                        <h4 id="wind">Wind</h4>
+                        <h2 id="wind_data" class="font-bold text-2xl">0km/h</h2>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
